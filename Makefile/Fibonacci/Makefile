@@ -1,3 +1,4 @@
+MAKEFLAGS += --no-print-directory
 NUMBER:=0
 CURRENT:=0
 NEXT:=1

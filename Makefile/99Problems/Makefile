@@ -1,3 +1,4 @@
+MAKEFLAGS += --no-print-directory
 HEAD := $(firstword $(LIST))
 TAIL := $(wordlist 2, $(words $(LIST)), $(LIST))
 

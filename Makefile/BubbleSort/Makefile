@@ -1,3 +1,4 @@
+MAKEFLAGS += --no-print-directory
 FIRST := $(firstword $(LIST))
 SECOND := $(word 2, $(LIST))
 TAIL := $(wordlist 3, $(words $(LIST)), $(LIST))
