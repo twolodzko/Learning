@@ -2,11 +2,11 @@
 
 echo {1..100} | zq '
 switch (
-  case (this % 15) == 0 => [this, "fizzbuzz"]
-  case (this % 3) == 0  => [this, "fizz"]
-  case (this % 5) == 0  => [this, "buzz"]
-  default               => [this, this]
+  case (this % 15) == 0 => {val:this, msg:"fizzbuzz"}
+  case (this % 3 ) == 0 => {val:this, msg:"fizz"}
+  case (this % 5 ) == 0 => {val:this, msg:"buzz"}
+  default               => {val:this, msg:this}
 ) |
-sort this[0] |
-this[1]
+merge val |
+yield msg
 ' -
