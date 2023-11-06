@@ -1,0 +1,7 @@
+
+# Rust program that prints itself
+quine:
+    #!/bin/bash
+    rustc quine.rs &>/dev/null
+    diff -s ./quine.rs <(./quine)
+    rm -rf ./quine
